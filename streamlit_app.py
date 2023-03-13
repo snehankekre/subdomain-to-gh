@@ -23,7 +23,7 @@ def get_gh_url(subdomain):
         return "Error: " + r.text
 
 
-subdomain = st.text_input("Streamlit Community Cloud subdomain:", placeholder="30days")
+subdomain = st.text_input("Streamlit Community Cloud subdomain:", placeholder="subdomain-to-gh")
 
 if subdomain:
     gh = get_gh_url(subdomain)
