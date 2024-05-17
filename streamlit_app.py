@@ -1,11 +1,10 @@
 import requests
-
 import streamlit as st
 
 
 def get_gh_url(subdomain):
     r = requests.get(
-        f"https://share.streamlit.io/api/v1/disambiguate?subdomain={subdomain}"
+        f"https://share.streamlit.io/api/v2/apps/disambiguate?subdomain={subdomain}"
     )
     try:
         coords = r.json()
